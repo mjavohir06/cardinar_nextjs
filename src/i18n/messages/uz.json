@@ -1,0 +1,30 @@
+{
+    "languages":{
+        "uzbek":"O'zbek",
+        "russian":"Rus"
+    },
+    "header":{
+        "search":"Qidirish"
+    },
+    "hearderMenu":{
+        "katalog":"Katalog",
+        "Конструктор":"Konstruktor",
+        "Где купить?":"Qаyerdan sotib olish?",
+        "Контакты":"Kontaktlar",
+        "Авточехол":"Avto qoplama",
+        "Полик":"Gilamcha",
+        "Накидки на торпеду":"Torpedo qoplamasi",
+        "Конструктор поликов":"Gilamcha konstruktori",
+        "Конструктор чехлов":"Qoplama konstruktori"
+    },
+    "footer":{
+        "Информация":"Ma'lumot",
+        "Номер телефона":"Telefon raqam",
+        "Почта":"Elektron pochta",
+        "Адрес (офис)":"Manzil (ofis)",
+        "Каталог":"Katalog",
+        "Конструктор":"Konstruktor",
+        "Где купить?":"Qаyerdan sotib olish?",
+        "СДЕЛАНО В":"YARATILGAN"
+    }
+}
