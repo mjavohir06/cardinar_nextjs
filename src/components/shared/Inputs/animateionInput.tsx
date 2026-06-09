@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import { baseInputType } from './types'
 
-export default function FloatingInput({ label, type = 'text',value,setValue ,styleInput}: baseInputType) {
+export default function FloatingInput({ label, type = 'text',required=true,value,setValue ,styleInput}: baseInputType) {
     const [focused, setFocused] = useState(false)
 
     const isFloating = focused || value.length > 0
@@ -16,7 +16,7 @@ export default function FloatingInput({ label, type = 'text',value,setValue ,sty
                 onBlur={() => setFocused(false)}
                 onChange={(e) => setValue(e.target.value)}
                 style={styleInput}
-                className="w-full border-b border-gray-300 text-white bg-black px-3 pt-5 pb-2 outline-none  transition-all duration-200 peer"
+                className="w-full border-b-3 border-gray-300 text-white bg-transparent px-3 pt-5 pb-2 outline-none  transition-all duration-200 peer"
             />
             <label className={` absolute left-3 z-10 transition-all duration-200 pointer-events-none text-white
                 ${isFloating
@@ -24,6 +24,9 @@ export default function FloatingInput({ label, type = 'text',value,setValue ,sty
                     : 'top-3.5 text-[16px]'
                 }`}>
                 {label}
+                { required&&
+                    <span className='text-red-600 text-[18px]'> *</span>
+                }
             </label>
         </div>
     )

@@ -30,6 +30,6 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts",
     "global.d.ts"
-  ],
+, "src/app/[locale]/tovar/[id]/type.d.ts"  ],
   "exclude": ["node_modules"]
 }

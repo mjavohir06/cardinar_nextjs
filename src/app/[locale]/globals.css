@@ -29,3 +29,28 @@ body {
 section{
   @apply w-full min-h-[80vh] flex flex-wrap content-center items-center justify-between p-[35px_10px] gap-6
 }
+
+@keyframes alert-progress {
+  from {
+    background: green;
+    width: 100%;
+  }
+
+  40%{
+    background: yellow;
+  }
+  80%{
+    background: red;
+  }
+
+  to {
+    width: 0%;
+    background: rgb(175, 0, 0);
+  }
+}
+
+.animate-alert-progress {
+  animation: alert-progress 5s linear forwards;
+}
+
+

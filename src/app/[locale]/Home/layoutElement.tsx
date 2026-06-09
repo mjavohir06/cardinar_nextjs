@@ -1,27 +1,34 @@
+"use client"
+
+import { MainContext } from "../MainContext";
+import { useState } from "react";
+import Alert from "@/components/shared/Parda/Alert.parda";
 
 
-import Footer from "@/components/Main/Footer/Footer"
-import Header from "@/components/Main/Header/Header"
 
 
 
-
-
-const LayoutElement = ({ children }: {
+const LayoutElement = ({
+    children
+}: Readonly<{
     children: React.ReactNode;
-}) => {
+}>) => {
+    const [open, setOpen] = useState(false)
+    const [message, setMessage] = useState<{ message: string, status: number }>({ message: "", status: 200 })
+
+    function alert(message: string, status: number) {
+        setOpen(true)
+        setMessage({ message, status })
+    }
     return (
-        // <MainContext.Provider value={{}}>
-        <>
-            <div>
-                <Header />
-            </div>
+        <MainContext.Provider value={{ alert }}>
             <div>
                 {children}
             </div>
-            <Footer />
-        </>
-        // </MainContext.Provider>
+
+            <Alert setOpen={setOpen} open={open} message={message.message} status={message.status} />
+
+        </MainContext.Provider>
     )
 }
 

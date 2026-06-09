@@ -4,6 +4,7 @@ import { CSSProperties, Dispatch, HTMLInputTypeAttribute, RefObject, SetStateAct
 export interface baseInputType{
     value:string
     label:string
+    required?:boolean
     style?:CSSProperties
     styleInput?:CSSProperties
     styleLabel?:CSSProperties
